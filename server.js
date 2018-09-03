@@ -12,3 +12,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 
+// Redirect to magic8ball
+app.get('/', (req, res) => {
+  res.redirect('/magic8ball');
+});
