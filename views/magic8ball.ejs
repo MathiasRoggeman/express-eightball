@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>MagicEightBall</title>
+  <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+  	<h1>Type your question</h1>
+	<ul class='magic8ball'>
+        <form action="/answer" method="POST">
+            <div class="input-group">
+               <input type="text" class="form-control" name="userInput" placeholder="Enter the question">
+               <div class="input-group-append">
+                    <button  id="askBTN" type="submit"></i>ASK</button>
+             </div>
+          </div>
+         </form>
+         <% if(userValue!=null){ %>    
+            <div><%= userValue.data %>  </div>
+        <%}%> 
+        
+	</ul>
+</body>
+</html>
