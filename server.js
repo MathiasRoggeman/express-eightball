@@ -40,12 +40,14 @@ app.post('/answer', (req,res)  => {
   var question = req.body.userInput;
   if(localStorage.getItem(question) == null){
     var answer = {
-      data :  randomAnswer
+      data :  randomAnswer,
+      question: question
     }
     localStorage.setItem(question, randomAnswer);
   }
   var answer = {
-    data :  localStorage.getItem(question)
+    data :  localStorage.getItem(question),
+    question: question
   }
 
 console.log(answer)
